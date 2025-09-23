@@ -1,0 +1,48 @@
+@use "variables" as *;
+@use "sass:color";
+
+@media screen and (max-width: 800px) {
+
+   .container_diocese {
+    flex-direction: column; // logos + hamburger en colonne
+    align-items: flex-end; // tout aligné à droite
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin: 20px 40px;
+  }
+
+  .navbar_links {
+    display: none;
+    flex-direction: column;
+    background: $off-white;
+    padding: 20px;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+
+  .navbar_links.show {
+    display: flex;
+  }
+
+  /* Animation en croix */
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  footer {
+    gap: 100px;
+  }
+}

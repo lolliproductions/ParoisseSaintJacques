@@ -1,0 +1,116 @@
+@charset "UTF-8";
+header {
+  text-align: center;
+  background: #f8f5f0;
+  border-bottom: 1.5px solid #3a5a97;
+}
+header .container_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container_header .container_title {
+  display: flex;
+  margin-left: 20px;
+}
+header .container_header .container_title .link_logo-title {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espace entre croix et texte */
+  text-decoration: none;
+  color: inherit;
+}
+header .container_header .container_title .link_logo-title .image_logo {
+  display: flex;
+  width: 70px;
+  height: auto;
+  margin-top: 20px;
+}
+header .container_header .container_title .link_logo-title .title_site {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: 1.5em;
+  padding: 50px 0px 10px 0px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  color: rgb(43.8468899522, 68.038277512, 114.1531100478);
+  text-align: left;
+}
+header .container_header .container_title .link_logo-title .title_site-second-part {
+  font-weight: lighter;
+}
+header .container_diocese {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+header .container_diocese .image_diocese {
+  margin: 10px 10px 0px 0px;
+  width: 80px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0px 20px 0px;
+  position: relative;
+}
+
+.navbar_links {
+  display: flex;
+  gap: 30px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  list-style: none;
+}
+.navbar_links a {
+  color: #4a4a4a;
+  position: relative;
+  transition: color 0.3s ease;
+  letter-spacing: 1px;
+}
+.navbar_links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  background: #3a5a97;
+  transition: width 0.3s ease;
+}
+.navbar_links a:hover {
+  color: #3a5a97;
+}
+.navbar_links a:hover::after {
+  width: 100%;
+}
+
+/* Bouton hamburger */
+.menu-toggle {
+  display: none; /* caché par défaut */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1000; /* reste au-dessus du menu */
+  top: 15px;
+  right: 20px;
+  position: static;
+}
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #3a5a97;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/*# sourceMappingURL=_header.css.map */

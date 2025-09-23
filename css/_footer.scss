@@ -1,0 +1,68 @@
+@use "variables" as *;
+@use "sass:color";
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: color.adjust($deep-blue, $lightness: -20%);
+    padding: 20px 0px 20px 10px;
+    margin-top: auto;
+}
+
+.footer_links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px 0px 50px 80px;
+    & a {
+    color: $off-white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+    &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: $light-gold;
+    transition: width 0.3s ease;
+  }
+&:hover {
+    color: $light-gold;
+  &::after {
+    width: 100%;
+  }
+}
+}
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  margin: 50px 80px 50px 0px;
+  color: $off-white;
+  font-family: "Lato", sans-serif;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  color: $off-white;
+}
+
+.text_footer {
+    color: $off-white;
+}

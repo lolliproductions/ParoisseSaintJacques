@@ -1,0 +1,117 @@
+@use "variables" as *;
+@use "sass:color";
+
+header {
+    text-align: center;
+    background: $off-white;
+    border-bottom: 1.5px solid $deep-blue;
+.container_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .container_title {
+    display: flex;
+    margin-left: 20px;
+    .link_logo-title {
+    display: flex;
+  align-items: center;
+  gap: 10px; /* espace entre croix et texte */
+  text-decoration: none;
+  color: inherit;
+  .image_logo {
+    display: flex;
+    width: 70px;
+    height: auto;
+    margin-top: 20px;
+}
+.title_site {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-size: 1.5em;
+    padding: 50px 0px 10px 0px;
+    text-transform: uppercase;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+    color: color.adjust($deep-blue, $lightness: -10%);
+    text-align: left;
+    &-second-part {
+    font-weight: lighter;
+}
+}
+} 
+}
+}
+
+.container_diocese {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  .image_diocese {
+    margin: 10px 10px 0px 0px;
+    max-height: 70px;
+    width: auto;
+}
+}
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0px 20px 0px;
+    position: relative;
+}
+
+.navbar_links {
+    display: flex;
+    gap: 30px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    list-style: none;
+        & a {
+        color: $deep-grey;
+        position: relative;
+        transition: color 0.3s ease;
+        letter-spacing: 1px;
+        &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0;
+    background: $deep-blue;
+    transition: width 0.3s ease;
+  }
+&:hover {
+            color: $deep-blue;
+}
+  &:hover::after {
+    width: 100%;
+  }
+            
+}
+}
+
+/* Bouton hamburger */
+.menu-toggle {
+  display: none; /* caché par défaut */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: static;
+
+  span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: $deep-blue;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+}

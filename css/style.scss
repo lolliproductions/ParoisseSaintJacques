@@ -1,0 +1,42 @@
+@use "variables" as *;
+@use "header";
+@use "footer";
+@use "media";
+@use "sass:color";
+
+
+* {
+    margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    background: #e7dfd3;
+    flex: 1;
+}
+
+.image_accueil {
+    width: 300px;
+    height: auto;
+    margin: 50px;
+}
+
+.container_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

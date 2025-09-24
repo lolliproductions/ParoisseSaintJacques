@@ -219,6 +219,7 @@ footer {
   }
   .footer_links {
     margin: auto;
+    flex-direction: row;
   }
 }
 * {

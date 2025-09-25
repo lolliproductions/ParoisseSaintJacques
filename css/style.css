@@ -275,4 +275,100 @@ main {
   justify-content: center;
 }
 
+.title_page {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  color: rgb(43.8468899522, 68.038277512, 114.1531100478);
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Cormorant Garamond", sans-serif;
+  margin: 80px 0px 80px 0px;
+}
+
+.title_actualites {
+  margin-bottom: 40px;
+  font-family: "Cormorant Garamond", sans-serif;
+  text-align: center;
+}
+
+.article-box {
+  background: #f8f5f0;
+  color: #333;
+  padding: 50px 70px;
+  margin: 20px auto 80px auto;
+  border-left: 6px solid #3a5a97;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  flex: 0 0 100%; /* Chaque actu prend 100% de la largeur du carrousel */
+  max-width: 100%; /* Empêche de dépasser */
+  box-sizing: border-box;
+}
+
+.text_page {
+  text-align: justify;
+  line-height: 1.6em;
+}
+
+.text_page a {
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.text_page a:hover {
+  color: #3a5a97;
+}
+
+.news-carousel {
+  position: relative;
+  width: 85%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.news-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #3a5a97;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* ronds */
+.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 5px;
+  background: #ccc;
+  cursor: pointer;
+}
+
+.dots button.active {
+  background: #3a5a97;
+}
+
 /*# sourceMappingURL=style.css.map */

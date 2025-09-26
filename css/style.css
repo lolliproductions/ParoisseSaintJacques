@@ -226,64 +226,6 @@ footer {
     font-size: 0.6em;
   }
 }
-* {
-  margin: 0;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: "Lato", sans-serif;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  animation: fadeIn 1s ease-in forwards;
-  animation-delay: 0.2s;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-main {
-  background: #e7dfd3;
-  flex: 1;
-}
-
-.image_accueil {
-  width: 300px;
-  height: auto;
-  margin: 50px;
-}
-
-.container_image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title_page {
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-  color: rgb(43.8468899522, 68.038277512, 114.1531100478);
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "Cormorant Garamond", sans-serif;
-  margin: 80px 0px 80px 0px;
-}
-
 .title_actualites {
   margin-bottom: 40px;
   font-family: "Cormorant Garamond", sans-serif;
@@ -369,6 +311,108 @@ main {
 
 .dots button.active {
   background: #3a5a97;
+}
+
+.title_mois {
+  margin-left: 50px;
+  font-family: "Cormorant Garamond", sans-serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.calendar {
+  max-width: 700px;
+  margin: auto;
+  border-left: 3px solid #3a5a97; /* ligne verticale */
+  padding-left: 20px;
+}
+
+.calendar:last-of-type {
+  margin-bottom: 80px;
+}
+
+.day {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.day::before {
+  content: "●";
+  position: absolute;
+  left: -26.5px;
+  color: #3a5a97;
+  font-size: 18px;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #3a5a97;
+  margin-bottom: 5px;
+}
+
+.events p {
+  margin: 2px 0;
+  text-align: justify;
+}
+
+* {
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+  animation-delay: 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  background: #e7dfd3;
+  flex: 1;
+}
+
+.image_accueil {
+  width: 300px;
+  height: auto;
+  margin: 50px;
+}
+
+.container_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title_page {
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  color: rgb(43.8468899522, 68.038277512, 114.1531100478);
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Cormorant Garamond", sans-serif;
+  margin: 80px 0px 80px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

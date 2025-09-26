@@ -1,0 +1,47 @@
+@use "variables" as *;
+@use "sass:color";
+
+
+.title_mois {
+    margin-left: 50px;
+    font-family: "Cormorant Garamond", sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.calendar {
+  max-width: 700px;
+  margin: auto;
+  border-left: 3px solid $deep-blue; /* ligne verticale */
+  padding-left: 20px;
+}
+
+.calendar:last-of-type {
+    margin-bottom: 80px;
+}
+
+.day {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.day::before {
+  content: "●";
+  position: absolute;
+  left: -26.5px;
+  color: $deep-blue;
+  font-size: 18px;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: $deep-blue;
+  margin-bottom: 5px;
+}
+
+.events p {
+  margin: 2px 0;
+  text-align: justify;
+}

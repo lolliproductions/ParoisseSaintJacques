@@ -11,7 +11,7 @@
 background: $off-white;
   color: #333;
   padding: 50px 70px;
-  margin: 20px auto 80px auto;
+  margin: 20px auto 20px auto;
   border-left: 6px solid $deep-blue;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05); 
@@ -49,35 +49,59 @@ background: $off-white;
   transition: transform 0.5s ease;
 }
 
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* espace entre flèches et points */
+}
 
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: $deep-blue;
-  color: white;
+.carousel-nav button {
+  background: none;
   border: none;
-  padding: 10px 15px;
+  font-size: 1.5rem; /* taille des < > */
+  color: $deep-blue;
   cursor: pointer;
-  border-radius: 50%;
+  transition: transform 0.2s ease, color 0.3s ease;
+   line-height: 1;
+    display: flex;
+    align-items: center;
+  justify-content: center;         
 }
-.prev { left: 10px; }
-.next { right: 10px; }
 
-/* ronds */
-.dots {
-  text-align: center;
-  margin-top: 15px;
+.carousel-nav button:hover {
+  transform: scale(1.2);
+  color: color.adjust($deep-blue, $lightness: -15%);
 }
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
 .dots button {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   border: none;
-  margin: 0 5px;
   background: #ccc;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
+
 .dots button.active {
   background: $deep-blue;
+}
+
+
+.dots:last-of-type {
+  margin-bottom: 80px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .article-box {
+    padding: 5px 5px;
+  }
+
 }

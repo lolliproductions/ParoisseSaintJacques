@@ -3,9 +3,14 @@
 
 @media screen and (max-width: 800px) {
 
+  header {
+    padding: 0 20px;
+  }
+
   .container_header {
     flex-direction: column;
     align-items: center;
+    padding: 10px;
   }
 
    .container_diocese {

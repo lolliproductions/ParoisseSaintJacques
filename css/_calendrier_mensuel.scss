@@ -3,7 +3,7 @@
 
 
 .title_mois {
-    margin-left: 50px;
+  margin-left: -50px;
     font-family: "Cormorant Garamond", sans-serif;
     text-transform: uppercase;
     font-weight: lighter;
@@ -13,6 +13,7 @@
 .calendar {
   max-width: 700px;
   margin: auto;
+  margin-left: 100px;
   border-left: 3px solid $deep-blue; /* ligne verticale */
   padding-left: 20px;
 }
@@ -44,4 +45,19 @@
 .events p {
   margin: 2px 0;
   text-align: justify;
+}
+
+@media screen and (max-width: 800px) {
+  .title_mois {
+    margin-left: 10px;
+    margin-bottom: 25px;
+  }
+
+  .calendar {
+    margin: 20px;
+  }
+
+  .title_page {
+    margin: 20px;
+  }
 }

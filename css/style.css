@@ -3,6 +3,7 @@ header {
   text-align: center;
   background: #f8f5f0;
   border-bottom: 1.5px solid #3a5a97;
+  padding: 0 100px;
 }
 header .container_header {
   display: flex;
@@ -177,9 +178,13 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+  header {
+    padding: 0 20px;
+  }
   .container_header {
     flex-direction: column;
     align-items: center;
+    padding: 10px;
   }
   .container_diocese {
     flex-direction: row;
@@ -236,7 +241,7 @@ footer {
   background: #f8f5f0;
   color: #333;
   padding: 50px 70px;
-  margin: 20px auto 80px auto;
+  margin: 20px auto 20px auto;
   border-left: 6px solid #3a5a97;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
@@ -273,30 +278,34 @@ footer {
   transition: transform 0.5s ease;
 }
 
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #3a5a97;
-  color: white;
+.carousel-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* espace entre flèches et points */
+}
+
+.carousel-nav button {
+  background: none;
   border: none;
-  padding: 10px 15px;
+  font-size: 1.5rem; /* taille des < > */
+  color: #3a5a97;
   cursor: pointer;
-  border-radius: 50%;
+  transition: transform 0.2s ease, color 0.3s ease;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.prev {
-  left: 10px;
+.carousel-nav button:hover {
+  transform: scale(1.2);
+  color: rgb(36.7703349282, 57.0574162679, 95.7296650718);
 }
 
-.next {
-  right: 10px;
-}
-
-/* ronds */
 .dots {
-  text-align: center;
-  margin-top: 15px;
+  display: flex;
+  gap: 8px;
 }
 
 .dots button {
@@ -304,17 +313,26 @@ footer {
   height: 10px;
   border-radius: 50%;
   border: none;
-  margin: 0 5px;
   background: #ccc;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .dots button.active {
   background: #3a5a97;
 }
 
+.dots:last-of-type {
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 800px) {
+  .article-box {
+    padding: 5px 5px;
+  }
+}
 .title_mois {
-  margin-left: 50px;
+  margin-left: -50px;
   font-family: "Cormorant Garamond", sans-serif;
   text-transform: uppercase;
   font-weight: lighter;
@@ -324,6 +342,7 @@ footer {
 .calendar {
   max-width: 700px;
   margin: auto;
+  margin-left: 100px;
   border-left: 3px solid #3a5a97; /* ligne verticale */
   padding-left: 20px;
 }
@@ -357,6 +376,18 @@ footer {
   text-align: justify;
 }
 
+@media screen and (max-width: 800px) {
+  .title_mois {
+    margin-left: 10px;
+    margin-bottom: 25px;
+  }
+  .calendar {
+    margin: 20px;
+  }
+  .title_page {
+    margin: 20px;
+  }
+}
 * {
   margin: 0;
 }
@@ -382,6 +413,7 @@ body {
   opacity: 0;
   animation: fadeIn 1s ease-in forwards;
   animation-delay: 0.2s;
+  background: #e7dfd3;
 }
 
 a {
@@ -390,8 +422,10 @@ a {
 }
 
 main {
-  background: #e7dfd3;
   flex: 1;
+  margin: 0 auto;
+  max-width: 1200px;
+  display: block;
 }
 
 .image_accueil {
